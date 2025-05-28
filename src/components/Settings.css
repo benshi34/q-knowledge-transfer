@@ -1,0 +1,227 @@
+.settings-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+}
+
+.settings-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.settings-section h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.setting-item {
+  margin-bottom: 1.5rem;
+}
+
+.setting-item:last-child {
+  margin-bottom: 0;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.setting-item select,
+.setting-item input[type="password"] {
+  width: calc(100% - 40px);
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  background-color: #f0f0f0;
+  outline: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.setting-item select:focus,
+.setting-item input[type="password"]:focus {
+  background-color: #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-item select:hover,
+.setting-item input[type="password"]:hover {
+  background-color: #e8e8e8;
+}
+
+.setting-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.setting-description {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1rem;
+  }
+}
+
+.settings-save-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.save-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.save-button.has-changes {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.save-button.has-changes:hover {
+  background-color: #0056b3;
+}
+
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-out;
+  z-index: 1000;
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-icon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+.settings-notice {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content p {
+  margin: 1rem 0;
+  line-height: 1.5;
+  color: #666;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modal-button.cancel {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.modal-button.confirm {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-button:hover {
+  opacity: 0.9;
+}
+
+.required-field::after {
+  content: " *";
+  color: red;
+}
+
+.info-notice {
+  background-color: #e8f4fd;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.info-notice p {
+  color: #1976d2;
+  margin: 0;
+} 

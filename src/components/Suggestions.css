@@ -1,0 +1,174 @@
+.suggestions-container {
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.suggestions-header {
+  margin-bottom: 1.5rem;
+}
+
+.suggestions-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.suggestions-header small {
+  color: #666;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.suggestion-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.suggestion-card:hover {
+  transform: translateX(4px);
+}
+
+.suggestion-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.suggestion-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Different colors for different suggestion types */
+.suggestion-card.approach {
+  border-left-color: #4CAF50;
+}
+
+.suggestion-card.dataStructure {
+  border-left-color: #2196F3;
+}
+
+.suggestion-card.optimization {
+  border-left-color: #FF9800;
+}
+
+.suggestion-card.testing {
+  border-left-color: #9C27B0;
+}
+
+.suggestion-card.selected {
+  transform: translateX(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thoughts-input-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.thoughts-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.add-to-chat-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-to-chat-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggestions-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refresh-suggestions-button {
+  padding: 4px 8px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refresh-suggestions-button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.refresh-suggestions-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Add these new styles for sequential coloring */
+.suggestion-card:nth-child(1) {
+  border-left: 4px solid #FF6B6B;  /* coral red */
+}
+
+.suggestion-card:nth-child(2) {
+  border-left: 4px solid #4ECDC4;  /* turquoise */
+}
+
+.suggestion-card:nth-child(3) {
+  border-left: 4px solid #FFD93D;  /* yellow */
+}
+
+.suggestion-card:nth-child(4) {
+  border-left: 4px solid #95D1CC;  /* sage green */
+}
+
+/* When selected, make the entire card have a light background of the same color */
+.suggestion-card.selected:nth-child(1) {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.suggestion-card.selected:nth-child(2) {
+  background-color: rgba(78, 205, 196, 0.1);
+}
+
+.suggestion-card.selected:nth-child(3) {
+  background-color: rgba(255, 217, 61, 0.1);
+}
+
+.suggestion-card.selected:nth-child(4) {
+  background-color: rgba(149, 209, 204, 0.1);
+} 

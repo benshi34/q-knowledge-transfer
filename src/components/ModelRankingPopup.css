@@ -1,0 +1,453 @@
+.model-ranking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.model-ranking-popup {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  max-width: 600px;
+  width: 90%;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.model-ranking-popup h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.popup-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.model-list {
+  margin-bottom: 20px;
+}
+
+.model-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: grab;
+}
+
+.model-item:last-child {
+  margin-bottom: 0;
+}
+
+.rank-number {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.model-info {
+  flex-grow: 1;
+}
+
+.model-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.model-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.drag-handle {
+  color: #999;
+  margin-left: 1rem;
+  cursor: grab;
+}
+
+.popup-buttons {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3 !important;
+}
+
+.submit-button:disabled {
+  background-color: #007bff !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: #7f8c8d;
+}
+
+.new-tag {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-left: 8px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.feedback-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  margin-bottom: 10px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.feedback-section h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.feedback-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 60px;
+  max-height: 120px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.self-efficacy-section {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.self-efficacy-select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.ranking-section {
+  margin-top: 24px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  width: 90%;
+  min-width: 800px;
+  max-width: 1200px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  margin: 20px;
+}
+
+.modal-layout {
+  display: flex;
+  gap: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  min-width: 760px;
+}
+
+.ranking-section {
+  flex: 1;
+  min-width: 350px;
+  max-width: 50%;
+}
+
+.questionnaire-section {
+  flex: 1;
+  min-width: 350px;
+  max-width: 50%;
+}
+
+.assessment-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.compact-slider-container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.compact-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.likert-question {
+  margin-bottom: 15px;
+}
+
+.likert-question p {
+  margin-bottom: 4px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 1024px) {
+  .modal-content {
+    min-width: unset;
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .modal-layout {
+    flex-direction: column;
+    min-width: unset;
+  }
+  
+  .ranking-section,
+  .questionnaire-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+
+.view-problem-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-problem-button:hover {
+  background-color: #e0e0e0;
+}
+
+.problem-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: hidden;
+}
+
+.problem-details-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px;
+}
+
+.problem-details-content h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.problem-description {
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  padding-right: 40px;
+}
+
+.close-button {
+  position: sticky;
+  top: 10px;
+  right: 10px;
+  float: right;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Add these new classes for the problem viewer */
+.problem-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Higher than modal-overlay */
+}
+
+.problem-viewer-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  position: relative;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-viewer-description {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  margin: -20px;
+  margin-top: 0;
+  white-space: pre-wrap;
+}
+
+.problem-viewer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.problem-viewer-close:hover {
+  background-color: #e0e0e0;
+} 

@@ -1,0 +1,443 @@
+.task-manager-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .task-manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .task-filters {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .task-filters select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .task-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    border-left: 4px solid #ddd;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .task-card.pending {
+    border-left-color: #f39c12;  /* Orange for coding */
+  }
+  
+  .task-card.in-progress {
+    border-left-color: #3498db;  /* Blue for math */
+  }
+  
+  .task-card.learning {
+    border-left-color: #9b59b6;  /* Purple for learning */
+  }
+  
+  .task-card.completed {
+    border-left-color: #2ecc71;
+  }
+  
+  .task-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .task-card.pending .task-status {
+    background: #fff3e0;
+    color: #f39c12;
+  }
+  
+  .task-card.in-progress .task-status {
+    background: #e3f2fd;
+    color: #3498db;
+  }
+  
+  .task-card.completed .task-status {
+    background: #e8f5e9;
+    color: #2ecc71;
+  }
+  
+  .task-meta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .completion-bar-container {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .completion-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: #2ecc71;
+    transition: width 0.3s ease;
+  }
+
+  .payout-info {
+    margin-top: 10px;
+    text-align: right;
+    color: #2ecc71;
+    font-weight: bold;
+  }
+
+  .instructions-section {
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .instructions-box {
+    margin-top: 12px;
+  }
+
+  .instructions-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .instructions-text ul {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+
+  .instructions-text li {
+    margin-bottom: 4px;
+  }
+
+  /* Problem List Styles */
+  .problem-table-container {
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .problem-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .problem-table th,
+  .problem-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .problem-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #444;
+  }
+
+  .problem-link {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .problem-link:hover {
+    text-decoration: underline;
+  }
+
+  .difficulty {
+    text-transform: capitalize;
+  }
+
+  .difficulty.easy {
+    color: #22c55e;
+  }
+
+  .difficulty.medium {
+    color: #f59e0b;
+  }
+
+  .difficulty.hard {
+    color: #ef4444;
+  }
+
+  .status-icon {
+    font-size: 1.2em;
+  }
+
+  .back-button {
+    margin: 20px;
+    padding: 8px 16px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #374151;
+  }
+
+  .back-button:hover {
+    background: #e5e7eb;
+  }
+
+  tr.pending {
+    background-color: #fff;
+  }
+
+  tr.in-progress {
+    background-color: #f0f9ff;
+  }
+
+  tr.completed {
+    background-color: #f0fdf4;
+  }
+  .task-card[style*="cursor: pointer"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #fafafa;
+  }
+
+  .get-more-tasks {
+    margin: 24px 0;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .get-more-tasks-button {
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+  }
+
+  .get-more-tasks-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+  }
+
+  .get-more-tasks-button:disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .tasks-incomplete-message {
+    color: #6b7280;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .model-selector-container {
+    margin-bottom: 20px;
+  }
+
+  .model-selector {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    min-width: 200px;
+    cursor: pointer;
+  }
+
+  .model-selector:hover {
+    border-color: #aaa;
+  }
+
+  .model-selector:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  }
+
+  .model-selector option:disabled {
+    color: #999;
+    font-style: italic;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .elo-scores {
+    display: flex;
+    gap: 20px;
+  }
+
+  .elo-score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .elo-score.coding {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+
+  .elo-score.math {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  .elo-label {
+    font-weight: 600;
+  }
+
+  .elo-value {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .elo-value.not-initialized {
+    color: #666;
+    font-style: italic;
+  }
+
+  .elo-score .elo-value:not(.not-initialized) {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .settings-prompt {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 500px;
+  }
+
+  .settings-prompt h3 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .settings-prompt p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+
+  .settings-prompt button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .settings-prompt button:hover {
+    background-color: #0056b3;
+  }
+
+  .voided-problem {
+    opacity: 0.6;
+  }
+
+  .problem-link.voided {
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .status-icon.voided {
+    color: #ff0000;
+  }
+
+  .voided {
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .problem-table th:last-child,
+  .problem-table td:last-child {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .points-info {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .points-limit-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background-color: #fff8e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .points-limit-info .points-label {
+    font-weight: 600;
+    color: #ff8f00;
+  }
+
+  .points-limit-info .points-value {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }

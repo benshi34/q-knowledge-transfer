@@ -1,0 +1,48 @@
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 16px);
+  background-color: white;
+  margin: 8px;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+}
+
+.tab-button:hover {
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tab-button.active {
+  color: #6c5ce7;
+  border-bottom: 2px solid #6c5ce7;
+  background-color: white;
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  background-color: white;
+} 

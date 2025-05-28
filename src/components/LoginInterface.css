@@ -1,0 +1,145 @@
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  outline: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.login-container input:focus {
+  background-color: #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.login-container button:hover {
+  background-color: #5b4bc4;
+  transform: translateY(-1px);
+}
+
+.login-container button:active {
+  transform: translateY(0);
+}
+
+.login-container .error {
+  color: #ff4757;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-container p button {
+  margin-top: 0;
+  padding: 8px 16px;
+}
+
+button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #999;
+}
+
+button.disabled:hover {
+  background-color: #999;
+  transform: none;
+}
+
+.login-container button.secondary {
+  background-color: #6c5ce7;
+  color: white;
+  font-weight: 500;
+}
+
+.login-container button.secondary:hover {
+  background-color: #5b4bc4;
+  transform: translateY(-1px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.divider span {
+  padding: 0 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.google-button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-button:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
