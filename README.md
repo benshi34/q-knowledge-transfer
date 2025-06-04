@@ -2,7 +2,9 @@
 
 This repository contains the user interface, datasets, (filtered) interaction trajectories, and analysis code for the paper: "When Models Know More Than They Can Explain: Quantifying Knowledge Transfer in Human-AI Collaboration." by Quan Shi, Carlos E. Jimenez, Shunyu Yao, Nick Haber, Diyi Yang, and Karthik Narasimhan.
 
-For a preview, navigate to [https://codeht.vercel.app](https://codeht.vercel.app).
+For the project overview, navigate to [https://kite-live.vercel.app](https://kite-live.vercel.app)
+
+For a preview of the user interface, navigate to [https://codeht.vercel.app](https://codeht.vercel.app).
 
 ## Prerequisites
 
